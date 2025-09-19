@@ -2,75 +2,135 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About Me</title>
+  <title>About the Artist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Gochi+Hand&display=swap" rel="stylesheet">
   <style>
-    body {
-      background: #f5f5f5;
-      margin: 0;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      color: #222;
-      min-height: 100vh;
+    :root {
+      --bg: #fafafa;
+      --surface: #fff;
+      --border: #ebebeb;
+      --text: #222;
+      --subtext: #555;
+      --accent: #56cfe1;
+      --btn-bg: #222;
+      --btn-text: #fff;
+      --gallery-bg: #f1f1f1;
     }
-    .container {
-      background: #fff;
-      max-width: 480px;
-      margin: 60px auto;
-      padding: 36px 32px;
-      border-radius: 20px;
-      box-shadow: 0 6px 32px rgba(0,0,0,0.06);
+    body {
+      background: var(--bg);
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: var(--text);
+    }
+    .canvas {
+      background: var(--surface);
+      max-width: 540px;
+      margin: 52px auto;
+      padding: 38px 38px 44px 38px;
+      border-radius: 18px;
+      box-shadow: 0 6px 24px rgba(34, 34, 34, 0.08);
+      border: 1.5px solid var(--border);
       text-align: center;
+      position: relative;
     }
     h1 {
-      font-weight: 700;
-      font-size: 2.1rem;
-      margin-bottom: 8px;
-      letter-spacing: 0.02em;
+      font-family: 'Gochi Hand', cursive;
+      font-size: 2.3rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+      margin-top: 0;
     }
-    .desc {
-      color: #616161;
-      margin-bottom: 28px;
-      font-size: 1.11rem;
+    .artnote {
+      font-size: 1.07rem;
+      color: var(--subtext);
+      margin-bottom: 26px;
+      font-style: italic;
+    }
+    .art-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 13px;
+      margin-bottom: 26px;
+    }
+    .art-sample {
+      width: 66px;
+      height: 66px;
+      background: var(--gallery-bg);
+      border-radius: 9px;
+      box-shadow: 0 1px 6px 0 #9ecdd966;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Gochi Hand', cursive;
+      font-size: 1.15em;
+      color: var(--accent);
+      border: 1px solid var(--border);
+    }
+    .about {
+      font-size: 1.02rem;
+      color: var(--subtext);
+      line-height: 1.6;
+      margin-bottom: 34px;
+      font-family: 'Montserrat', sans-serif;
     }
     .shop-btn {
       display: inline-block;
-      background: #222;
-      color: #fff;
-      padding: 13px 36px;
-      border-radius: 26px;
-      font-size: 1.09rem;
-      font-weight: 600;
+      background: var(--btn-bg);
+      color: var(--btn-text);
+      padding: 15px 38px;
+      border-radius: 25px;
+      font-size: 1.07rem;
+      font-weight: bold;
       border: none;
-      outline: none;
       cursor: pointer;
-      letter-spacing: 0.02em;
-      box-shadow: 0 2px 10px rgba(145,140,147,0.07);
-      transition: background 0.19s;
+      letter-spacing: 0.01em;
       text-decoration: none;
+      box-shadow: 0 2px 9px rgba(34,34,34,0.08);
+      transition: background 0.18s, filter 0.14s;
+      filter: brightness(0.97);
     }
     .shop-btn:hover {
-      background: #444;
+      background: var(--accent);
+      color: var(--btn-bg);
     }
-    @media (max-width: 540px) {
-      .container {
-        margin: 22px 7px;
-        padding: 26px 7px;
+    @media (max-width: 600px) {
+      .canvas {
+        margin: 17px 2vw;
+        padding: 18px 1vw 28px 1vw;
+        max-width: 98vw;
       }
       h1 {
-        font-size: 1.4rem;
+        font-size: 1.35rem;
+      }
+      .art-gallery {
+        gap: 5px;
+      }
+      .art-sample {
+        width: 38px;
+        height: 38px;
+        font-size: 0.82em;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>About Me</h1>
-    <p class="desc">
-      Hello! I'm passionate about creativity, design, and building unique experiences. My journey combines digital technology and genuine storytelling to help others grow, connect, and thrive.<br><br>
-      Whether crafting beautiful sites, curating content, or launching exciting projects, I value authenticity and innovation in all I do.
-    </p>
+  <div class="canvas">
+    <h1>About the Artist</h1>
+    <div class="artnote">"Art is how I color the stories of the world."</div>
+    <div class="art-gallery">
+      <div class="art-sample">🎨</div>
+      <div class="art-sample">🖌️</div>
+      <div class="art-sample">🌸</div>
+      <div class="art-sample">✨</div>
+    </div>
+    <div class="about">
+      Creativity is my language and every canvas, a window to my dreams.
+      With playful forms, clean color, and spirited lines, my work aims to evoke wonder and joy.<br><br>
+      Find original art and prints in my store—each piece designed to spark inspiration!
+    </div>
     <a class="shop-btn" href="https://b4959f-7d.myshopify.com/" target="_blank" rel="noopener">
-      Visit My Shop
+      Explore My Art Store
     </a>
   </div>
 </body>
