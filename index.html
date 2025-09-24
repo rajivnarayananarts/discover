@@ -25,9 +25,9 @@
     }
     .canvas {
       background: var(--surface);
-      max-width: 540px;
+      max-width: 640px;
       margin: 52px auto;
-      padding: 38px 38px 44px 38px;
+      padding: 42px 38px 52px 38px;
       border-radius: 18px;
       box-shadow: 0 6px 24px rgba(34, 34, 34, 0.08);
       border: 1.5px solid var(--border);
@@ -36,10 +36,16 @@
     }
     h1 {
       font-family: 'Gochi Hand', cursive;
-      font-size: 2.3rem;
+      font-size: 2.4rem;
       color: var(--accent);
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       margin-top: 0;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 34px;
+      margin-bottom: 12px;
+      color: var(--text);
     }
     .artnote {
       font-size: 1.07rem;
@@ -67,12 +73,28 @@
       color: var(--accent);
       border: 1px solid var(--border);
     }
-    .about {
+    .about, .section {
       font-size: 1.02rem;
       color: var(--subtext);
       line-height: 1.6;
-      margin-bottom: 34px;
+      margin-bottom: 22px;
       font-family: 'Montserrat', sans-serif;
+      text-align: left;
+    }
+    .section ul {
+      padding-left: 18px;
+      margin: 8px 0 24px 0;
+    }
+    .section ul li {
+      margin-bottom: 6px;
+    }
+    .contact {
+      margin-top: 18px;
+      font-size: 1.02rem;
+    }
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
     }
     .shop-btn {
       display: inline-block;
@@ -97,11 +119,14 @@
     @media (max-width: 600px) {
       .canvas {
         margin: 17px 2vw;
-        padding: 18px 1vw 28px 1vw;
+        padding: 18px 4vw 28px 4vw;
         max-width: 98vw;
       }
       h1 {
         font-size: 1.35rem;
+      }
+      h2 {
+        font-size: 1.12rem;
       }
       .art-gallery {
         gap: 5px;
@@ -129,6 +154,34 @@
       With playful forms, clean color, and spirited lines, my work aims to evoke wonder and joy.<br><br>
       Find original art and prints in my store—each piece designed to spark inspiration!
     </div>
+
+    <h2>Art Shows</h2>
+    <div class="section">
+      <ul>
+        <li>2024 – "Colors of Emotion" at Gallery Bloom, New York</li>
+        <li>2023 – "Dreamscapes" at Aurora Art Fest, Chicago</li>
+        <li>2022 – "Flourish" Summer Exhibition, Los Angeles</li>
+      </ul>
+    </div>
+
+    <h2>Awards</h2>
+    <div class="section">
+      <ul>
+        <li>2024 – Emerging Artist Award, City Arts Council</li>
+        <li>2023 – Best Abstract Work, Aurora Art Fest</li>
+        <li>2021 – Creative Spirit Recognition, National Art Guild</li>
+      </ul>
+    </div>
+
+    <h2>Contact</h2>
+    <div class="section contact">
+      Let's connect! Reach out anytime.<br><br>
+      Email: <a href="mailto:artist@email.com">artist@email.com</a><br>
+      Instagram: <a href="https://instagram.com/yourhandle" target="_blank">@yourhandle</a><br>
+      Phone: (123) 456-7890
+    </div>
+
+    <br>
     <a class="shop-btn" href="https://b4959f-7d.myshopify.com/" target="_blank" rel="noopener">
       Explore My Art Store
     </a>
