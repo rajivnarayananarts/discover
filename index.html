@@ -2,189 +2,274 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About the Artist</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Gochi+Hand&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About the Artist – Portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400|Roboto:400,700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #fafafa;
-      --surface: #fff;
-      --border: #ebebeb;
-      --text: #222;
-      --subtext: #555;
-      --accent: #56cfe1;
-      --btn-bg: #222;
-      --btn-text: #fff;
-      --gallery-bg: #f1f1f1;
+      --primary: #0d47a1;
+      --accent: #ff4081;
+      --background: #f3f6fb;
+      --card-bg: #fff;
+      --text-heading: #212121;
+      --text-body: #424242;
+      --gradient: linear-gradient(90deg, #0d47a1 60%, #ff4081 100%);
     }
+    * { box-sizing: border-box; }
     body {
-      background: var(--bg);
       margin: 0;
-      font-family: 'Montserrat', Arial, sans-serif;
-      color: var(--text);
+      background: var(--background);
+      font-family: 'Roboto', Arial, sans-serif;
+      color: var(--text-body);
+      line-height: 1.7;
     }
-    .canvas {
-      background: var(--surface);
-      max-width: 640px;
-      margin: 52px auto;
-      padding: 42px 38px 52px 38px;
-      border-radius: 18px;
-      box-shadow: 0 6px 24px rgba(34, 34, 34, 0.08);
-      border: 1.5px solid var(--border);
+    header {
+      background: var(--gradient);
+      color: #fff;
+      padding: 3rem 1rem 2rem 1rem;
       text-align: center;
-      position: relative;
     }
-    h1 {
-      font-family: 'Gochi Hand', cursive;
-      font-size: 2.4rem;
-      color: var(--accent);
-      margin-bottom: 12px;
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.7rem;
       margin-top: 0;
+      margin-bottom: 0.4em;
+      letter-spacing: 0.02em;
+      animation: fadein 2s;
+    }
+    header p {
+      color: #f8f9fa;
+      font-size: 1.3rem;
+      max-width: 35em;
+      margin: 0 auto 1.5em auto;
+      opacity: 0.95;
+    }
+    nav {
+      display: flex;
+      gap: 2em;
+      justify-content: center;
+      margin-bottom: 2em;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.07em;
+      padding: 0.4em 1em;
+      border-radius: 2em;
+    }
+    nav a:hover, nav a.active {
+      background: rgba(255,255,255,0.17);
+    }
+    .container {
+      max-width: 950px;
+      margin: 2.5em auto 2em auto;
+      padding: 0 1rem;
+      display: grid;
+      gap: 2em;
+    }
+    section {
+      background: var(--card-bg);
+      border-radius: 1.6em;
+      box-shadow: 0 3px 18px rgba(0,0,0,0.055);
+      padding: 2em;
+    }
+    .circle-img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--accent);
+      margin-bottom: 1em;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 16px rgba(13,71,161,0.19);
     }
     h2 {
-      font-size: 1.4rem;
-      margin-top: 34px;
-      margin-bottom: 12px;
-      color: var(--text);
-    }
-    .artnote {
-      font-size: 1.07rem;
-      color: var(--subtext);
-      margin-bottom: 26px;
-      font-style: italic;
-    }
-    .art-gallery {
-      display: flex;
-      justify-content: center;
-      gap: 13px;
-      margin-bottom: 26px;
-    }
-    .art-sample {
-      width: 66px;
-      height: 66px;
-      background: var(--gallery-bg);
-      border-radius: 9px;
-      box-shadow: 0 1px 6px 0 #9ecdd966;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Gochi Hand', cursive;
-      font-size: 1.15em;
-      color: var(--accent);
-      border: 1px solid var(--border);
-    }
-    .about, .section {
-      font-size: 1.02rem;
-      color: var(--subtext);
-      line-height: 1.6;
-      margin-bottom: 22px;
+      color: var(--primary);
       font-family: 'Montserrat', sans-serif;
-      text-align: left;
-    }
-    .section ul {
-      padding-left: 18px;
-      margin: 8px 0 24px 0;
-    }
-    .section ul li {
-      margin-bottom: 6px;
-    }
-    .contact {
-      margin-top: 18px;
-      font-size: 1.02rem;
-    }
-    .contact a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    .shop-btn {
-      display: inline-block;
-      background: var(--btn-bg);
-      color: var(--btn-text);
-      padding: 15px 38px;
-      border-radius: 25px;
-      font-size: 1.07rem;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
+      margin-top: 0;
       letter-spacing: 0.01em;
-      text-decoration: none;
-      box-shadow: 0 2px 9px rgba(34,34,34,0.08);
-      transition: background 0.18s, filter 0.14s;
-      filter: brightness(0.97);
+      font-size: 1.7em;
     }
-    .shop-btn:hover {
-      background: var(--accent);
-      color: var(--btn-bg);
+    .exp-entry {
+      padding-left: 1.3em;
+      border-left: 4px solid var(--accent);
+      margin-bottom: 1.5em;
     }
-    @media (max-width: 600px) {
-      .canvas {
-        margin: 17px 2vw;
-        padding: 18px 4vw 28px 4vw;
-        max-width: 98vw;
-      }
-      h1 {
-        font-size: 1.35rem;
-      }
-      h2 {
-        font-size: 1.12rem;
-      }
-      .art-gallery {
-        gap: 5px;
-      }
-      .art-sample {
-        width: 38px;
-        height: 38px;
-        font-size: 0.82em;
-      }
+    .exp-title {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 1.1em;
+      margin-bottom: 0.25em;
+    }
+    .exp-year {
+      font-size: 0.9em;
+      color: #666;
+      font-style: italic;
+      margin-bottom: 0.6em;
+    }
+    .exp-desc { color: var(--text-body); margin-bottom: 0.8em; }
+    
+    /* Gallery Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.3em;
+    }
+    .gallery-item {
+      border-radius: 1em;
+      overflow: hidden;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      background: #f7f7fb;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .gallery-item:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-caption {
+      padding: 0.8em;
+      text-align: center;
+      font-size: 0.95em;
+      color: var(--text-body);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 0.8em;
+      border: 1px solid #c6d7eb;
+      border-radius: 1em;
+      font-size: 1em;
+      background: #f5f7fb;
+      outline: none;
+    }
+    .contact-form button {
+      background: var(--gradient);
+      color: #fff;
+      padding: 0.7em 0;
+      border: none;
+      border-radius: 1em;
+      font-weight: 600;
+      font-size: 1.08em;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background: linear-gradient(90deg, #1e88e5 50%, #ff4081 100%);
+    }
+    @keyframes fadein {
+      from { opacity: 0; transform: translateY(60px);}
+      to { opacity: 1; transform: translateY(0);}
     }
   </style>
 </head>
 <body>
-  <div class="canvas">
-    <h1>About the Artist</h1>
-    <div class="artnote">"Art is how I color the stories of the world."</div>
-    <div class="art-gallery">
-      <div class="art-sample">🎨</div>
-      <div class="art-sample">🖌️</div>
-      <div class="art-sample">🌸</div>
-      <div class="art-sample">✨</div>
-    </div>
-    <div class="about">
-      Creativity is my language and every canvas, a window to my dreams.
-      With playful forms, clean color, and spirited lines, my work aims to evoke wonder and joy.<br><br>
-      Find original art and prints in my store—each piece designed to spark inspiration!
-    </div>
+  <header>
+    <img src="assets/img/profile.png" alt="Artist photo" class="circle-img">
+    <h1>Hello, I'm Ava — Visual Artist 🎨✨</h1>
+    <p>I tell stories through colors, lines, and playful compositions. My art celebrates wonder, imagination, and the beauty hidden in everyday details.</p>
+    <nav>
+      <a href="#about" class="active">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#shows">Art Shows</a>
+      <a href="#awards">Awards</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <h2>Art Shows</h2>
-    <div class="section">
-      <ul>
-        <li>2024 – "Colors of Emotion" at Gallery Bloom, New York</li>
-        <li>2023 – "Dreamscapes" at Aurora Art Fest, Chicago</li>
-        <li>2022 – "Flourish" Summer Exhibition, Los Angeles</li>
-      </ul>
-    </div>
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a contemporary artist passionate about blending clean aesthetics with expressive storytelling. 
+        My works often explore themes of joy, connection, and transformation. Each canvas becomes a mirror of inner dreams, capturing fleeting emotions in bold strokes and delicate forms.
+      </p>
+    </section>
 
-    <h2>Awards</h2>
-    <div class="section">
-      <ul>
-        <li>2024 – Emerging Artist Award, City Arts Council</li>
-        <li>2023 – Best Abstract Work, Aurora Art Fest</li>
-        <li>2021 – Creative Spirit Recognition, National Art Guild</li>
-      </ul>
-    </div>
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/img/art1.jpg" alt="Abstract Art 1">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/img/art2.jpg" alt="Abstract Art 2">
+          <div class="gallery-caption">"Morning Bloom"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/img/art3.jpg" alt="Abstract Art 3">
+          <div class="gallery-caption">"Dream Weaver"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/img/art4.jpg" alt="Abstract Art 4">
+          <div class="gallery-caption">"City of Stars"</div>
+        </div>
+      </div>
+    </section>
 
-    <h2>Contact</h2>
-    <div class="section contact">
-      Let's connect! Reach out anytime.<br><br>
-      Email: <a href="mailto:artist@email.com">artist@email.com</a><br>
-      Instagram: <a href="https://instagram.com/yourhandle" target="_blank">@yourhandle</a><br>
-      Phone: (123) 456-7890
-    </div>
+    <section id="shows">
+      <h2>Exhibitions & Art Shows</h2>
+      <div class="exp-entry">
+        <div class="exp-title">“Colors of Emotion” – Gallery Bloom, New York</div>
+        <div class="exp-year">2024</div>
+        <div class="exp-desc">Featured collection exploring feelings through abstract forms.</div>
+      </div>
+      <div class="exp-entry">
+        <div class="exp-title">“Dreamscapes” – Aurora Art Fest, Chicago</div>
+        <div class="exp-year">2023</div>
+        <div class="exp-desc">Immersive series capturing whimsical, surreal landscapes.</div>
+      </div>
+      <div class="exp-entry">
+        <div class="exp-title">“Flourish” – Summer Exhibition, Los Angeles</div>
+        <div class="exp-year">2022</div>
+        <div class="exp-desc">Introduced botanical-inspired artworks with mixed media.</div>
+      </div>
+    </section>
 
-    <br>
-    <a class="shop-btn" href="https://b4959f-7d.myshopify.com/" target="_blank" rel="noopener">
-      Explore My Art Store
-    </a>
+    <section id="awards">
+      <h2>Awards</h2>
+      <div class="exp-entry">
+        <div class="exp-title">Emerging Artist Award – City Arts Council</div>
+        <div class="exp-year">2024</div>
+        <div class="exp-desc">Recognized for innovation and emotional depth in visual art.</div>
+      </div>
+      <div class="exp-entry">
+        <div class="exp-title">Best Abstract Work – Aurora Art Fest</div>
+        <div class="exp-year">2023</div>
+        <div class="exp-desc">Honored for the series “Threads of Light.”</div>
+      </div>
+      <div class="exp-entry">
+        <div class="exp-title">Creative Spirit Recognition – National Art Guild</div>
+        <div class="exp-year">2021</div>
+        <div class="exp-desc">Awarded for blending modern design with poetic narrative.</div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Interested in collaborations, commissions, or exhibitions? Get in touch!</p>
+      <form class="contact-form" action="mailto:artist@email.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
   </div>
 </body>
 </html>
