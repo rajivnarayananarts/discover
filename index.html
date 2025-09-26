@@ -7,13 +7,13 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400|Roboto:400,700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #273c3d;         /* Matches Shopify store header/nav color */
-      --accent: #d48c41;          /* Accent from Shopify CTAs */
-      --background: #f9fafb;      /* Soft background */
+      --primary: #273c3d;         /* Deep teal blue for header/nav, Shopify-like */
+      --accent: #d48c41;          /* Amber accent similar to Shopify CTA */
+      --background: #f9fafb;      /* Subtle, very light page background */
       --card-bg: #fff;
       --text-heading: #212121;
-      --text-body: #334347;       /* Slightly blue-gray for readability */
-      --gradient: linear-gradient(90deg, #273c3d 60%, #d48c41 100%);
+      --text-body: #334347;       /* Blue-gray body text */
+      --gradient: linear-gradient(90deg,#273c3d 60%,#d48c41 100%);
       --shop-button-bg: #d48c41;
       --shop-button-hover: #273c3d;
       --shop-button-color: #fff;
@@ -45,9 +45,9 @@
       border-radius: 2em;
       border: none;
       text-decoration: none;
-      font-size: 1.2em;
+      font-size: 1.15em;
       box-shadow: 0 2px 10px rgba(0,0,0,0.10);
-      transition: background 0.2s;
+      transition: background 0.2s, color 0.2s;
       z-index: 10;
     }
     .shop-button:hover {
@@ -83,6 +83,7 @@
       font-size: 1.07em;
       padding: 0.4em 1em;
       border-radius: 2em;
+      transition: background 0.18s, color 0.18s;
     }
     nav a:hover, nav a.active {
       background: rgba(255,255,255,0.18);
@@ -138,11 +139,10 @@
       margin-bottom: 0.6em;
     }
     .exp-desc { color: var(--text-body); margin-bottom: 0.8em; }
-
     /* Gallery Grid */
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
       gap: 1.1em;
       background: none;
     }
@@ -151,7 +151,7 @@
       overflow: hidden;
       box-shadow: 0 3px 12px rgba(0,0,0,0.07);
       background: #f7f8fb;
-      transition: transform 0.18s, box-shadow 0.18s;
+      transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
       border: 1px solid #e0e8ed;
     }
     .gallery-item:hover {
@@ -179,7 +179,6 @@
       color: var(--text-body);
       background: #f9fafb;
     }
-
     .contact-form {
       display: flex;
       flex-direction: column;
@@ -234,14 +233,150 @@
     <section id="about">
       <h2>About Me</h2>
       <p>
-        I am a contemporary artist passionate about blending clean aesthetics with expressive storytelling.
+        I am a contemporary artist passionate about blending clean aesthetics with expressive storytelling. 
         My works often explore themes of joy, connection, and transformation. Each canvas becomes a mirror of inner dreams, capturing fleeting emotions in bold strokes and delicate forms.
       </p>
     </section>
 
-    <!-- Gallery, Shows, Awards, Contact... unchanged for brevity; copy your previous HTML for these sections -->
-    <!-- Insert the Gallery, Shows, Awards, Contact sections here with existing structure -->
-    <!-- ... -->
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="galleryImages/1.jpg" alt="Abstract Art 1">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="galleryImages/2.JPG" alt="Abstract Art 2">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="galleryImages/3.jpg" alt="Abstract Art 3">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="galleryImages/4.jpg" alt="Abstract Art 4">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="galleryImages/5.jpg" alt="Abstract Art 5">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="galleryImages/6.jpg" alt="Abstract Art 6">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="galleryImages/7.jpg" alt="Abstract Art 7">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="galleryImages/8.jpg" alt="Abstract Art 8">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="galleryImages/9.jpg" alt="Abstract Art 9">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="galleryImages/10.jpg" alt="Abstract Art 10">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+         <div class="gallery-item">
+          <img src="galleryImages/11.jpg" alt="Abstract Art 11">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="galleryImages/12.jpg" alt="Abstract Art 12">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="galleryImages/13.jpg" alt="Abstract Art 13">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="galleryImages/14.jpg" alt="Abstract Art 14">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="galleryImages/15.jpg" alt="Abstract Art 15">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="galleryImages/16.JPG" alt="Abstract Art 16">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="galleryImages/17.JPG" alt="Abstract Art 17">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="galleryImages/19.JPG" alt="Abstract Art 19">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="galleryImages/20.JPG" alt="Abstract Art 20">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="galleryImages/21.jpg" alt="Abstract Art 21">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="galleryImages/22.jpg" alt="Abstract Art 22">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="galleryImages/25.JPG" alt="Abstract Art 25">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="galleryImages/26.JPG" alt="Abstract Art 26">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+        <div class="gallery-item">
+          <img src="galleryImages/27.jpg" alt="Abstract Art 27">
+          <div class="gallery-caption">"Waves of Thought"</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="shows">
+      <h2>Exhibitions & Art Shows</h2>
+      <div class="exp-entry">
+        <div class="exp-title">“Colors of Emotion” – Gallery Bloom, New York</div>
+        <div class="exp-year">2024</div>
+        <div class="exp-desc">Featured collection exploring feelings through abstract forms.</div>
+      </div>
+      <div class="exp-entry">
+        <div class="exp-title">“Dreamscapes” – Aurora Art Fest, Chicago</div>
+        <div class="exp-year">2023</div>
+        <div class="exp-desc">Immersive series capturing whimsical, surreal landscapes.</div>
+      </div>
+      <div class="exp-entry">
+        <div class="exp-title">“Flourish” – Summer Exhibition, Los Angeles</div>
+        <div class="exp-year">2022</div>
+        <div class="exp-desc">Introduced botanical-inspired artworks with mixed media.</div>
+      </div>
+    </section>
+
+    <section id="awards">
+      <h2>Awards</h2>
+      <div class="exp-entry">
+        <div class="exp-title">Emerging Artist Award – City Arts Council</div>
+        <div class="exp-year">2024</div>
+        <div class="exp-desc">Recognized for innovation and emotional depth in visual art.</div>
+      </div>
+      <div class="exp-entry">
+        <div class="exp-title">Best Abstract Work – Aurora Art Fest</div>
+        <div class="exp-year">2023</div>
+        <div class="exp-desc">Honored for the series “Threads of Light.”</div>
+      </div>
+      <div class="exp-entry">
+        <div class="exp-title">Creative Spirit Recognition – National Art Guild</div>
+        <div class="exp-year">2021</div>
+        <div class="exp-desc">Awarded for blending modern design with poetic narrative.</div>
+      </div>
+    </section>
 
     <section id="contact">
       <h2>Contact</h2>
